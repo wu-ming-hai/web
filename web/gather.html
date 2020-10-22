@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>李白简介网站</title>
+<link href="css/style.css" type="text/css" rel="stylesheet"/>
+<link href="css/globe.css" type="text/css" rel="stylesheet"/>
+<link href="css/gather.css" type="text/css" rel="stylesheet"/>
+<script src="js/main.js"></script>
+<script src="js/text.js"></script>
+<!-- 导入jqueyr包 -->
+<script src="source/jquery-3.5.1/jquery-3.5.1.js"/></script>
+<script>
+	$(document).ready(function(){
+		$(".slide").click(function () {
+			var Num = $(".slide").length;
+			var index = $(this).index();
+			for(var i = 0;i<Num;i++){
+				if(i!=index){
+					$(".slide").eq(i).animate({width:"10%"});
+					$(".slide").eq(i).children("div").eq(0).css("filter","blur(5px)");
+				}else{
+					$(".slide").eq(index).animate({width:"60%"}); 
+					$(".slide").eq(index).children("div").eq(0).css("filter","blur(0px)");
+				}
+			}
+			
+		});
+		
+    });
+    	///////////fixed的显示和隐藏功能/////////
+	$(document).ready(function(){
+		
+		$("#item2").mouseenter(function(){
+			$("#item1").css("visibility","visible");
+			
+		});
+		$("#item2").mouseleave(function () { 
+			$("#item1").css("visibility","hidden");
+		 });
+
+		 $("#item3").click(function () { 
+			$("#advertisement").css("display","none");
+		 });
+	});
+
+	$(document).ready(function(e){
+		$("#showList").mousedown(function(){
+			$("#list").toggle();
+		});
+
+		var b = $("#list").mouseenter(function(){});
+		$("#showList").mouseleave(function(){
+			if(b){
+				b = "";
+			}else{
+				$("#list").toggle();
+				b = "";
+			}
+		});
+
+
+    });
+    
+    /////////设置阴影设置
+    $(document).ready(function(){
+        $(".listTitle").mouseenter(function(){
+            var index = $(this).index();
+            $(".listTitle").eq(index).css("box-shadow","1px 1px 10px 5px rgba(43, 43, 43, 0.3)");
+        });
+
+        $(".listTitle").mouseleave(function(){
+            var index = $(this).index();
+            $(".listTitle").eq(index).css("box-shadow","");
+        });
+    });
+
+</script>
+</head>
+
+<body onload="loopGo()">
+
+	<!--局部部分设置 右边可以设置一个面包屑导航栏进行显示-->
+    <!--
+    	1.全部数据一般都是通过sql进行一个管理,用户还是分为权限设置.（范围一定要符合一定的条件和设置,目的最重要,客观的讲,有时候过程并不是很重要,从小事做起一步一步进行行动）
+    	2.小而精细,不要涉及太广的地域和地区.3-5个地区都是可以的.
+        3.简述名称一定要精简
+	-->
+
+    <!-- top区域 -->
+	<div class="top">
+		<div id="content">
+			<ul>
+				<li>
+					<a href="index.html">首页</a>
+				</li>
+				<li>
+					<a href="gather.html">作品集合</a>
+					<ul  class="poetry">
+						<li><a href="#">梦游天姥吟留别</a></li>
+						<li><a href="#">侠客行</a></li>
+						<li><a href="#">关山月</a></li>
+						<li><a href="#">战城南</a></li>
+						<li><a href="#">乌栖曲</a></li>
+						<li>
+							<a href="#">更多  >></a>
+							<ul class="poetryChild">
+								<li><a href="#">侠客行</a></li>
+								<li><a href="#">侠客行</a></li>
+								<li><a href="#">侠客行</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+			</ul>
+			<span>
+				<a href="#" >登录 | 注册</a>
+			</span>
+		</div>
+	</div>
+
+	<div id="content">
+        <div class="coverInfo">
+            <ul>
+                <li id="itemInCovers">最新消息：XXXXXXXX</li>
+            </ul>
+        </div>
+
+        <div id="gatherTitle" > 
+
+        </div>
+        <div id="gatherShilder">
+            <div class="tet">
+                <div class="slide">
+                    <div>
+                        <img src="img/1.jpg"/>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div>
+                        <img src="img/2.jpg"/>
+                    </div>
+                </div>
+                <div class="slide" style="width: 60%;">
+                    <div style="filter: blur(0px);">
+                        <img src="img/3.jpg" />
+                    </div>
+                </div>
+                <div class="slide">
+                    <div>
+                        <img src="img/4.jpg"/>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div>
+                        <img src="img/5.jpg"/>
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="gatherTitleTwo"></div>
+                <div id="list">
+                    <div class="listTitle">
+                        <div></div>
+                        <p>《《侠客行》》</p>
+                    </div>
+                    <div class="listTitle">
+                        <div></div>
+                        <p>《《将进酒·君不见黄河之水天上来》》</p>
+                    </div>
+                    <div class="listTitle">
+                        <div></div>
+                        <p>《《静夜思》》</p>
+                    </div>
+                    <div class="listTitle">
+                        <div></div>
+                        <p>《《蜀道难》》</p>
+                    </div>
+                    <div class="listTitle">
+                        <div></div>
+                        <p>《《梦游天姥吟留别》》</p>
+                    </div>
+                    <div class="listTitle">
+                        <div></div>
+                        <p>《《望庐山瀑布》》</p>
+                    </div>
+                    <div class="listTitle">
+                        <div></div>
+                        <p>《《赠汪伦》》</p>
+                    </div>
+                    <div class="listTitle">
+                        <div></div>
+                        <p>《《早发白帝城》》</p>
+                    </div>
+                    <div class="pointTitle">
+                        <div>
+                            <span>上一页</span>
+                            <span>1</span>
+                            <span>2</span>
+                            <span>3</span>
+                            <span>下一页</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+	</div>
+
+	<!-- foot区域 -->
+	<div class="foot" >
+			<div id="content">
+            	<span id="ti">2020/10/13日制作  @copy  当前时间为:<span id="showTime" onclick="getTime()" style="font-size:20px;color:#000">2020/10/13&nbsp;&nbsp;&nbsp;10:10:10</span></span>            
+            </div>
+            <div id="advertisement">
+            	<div id="item1" >
+                </div>
+                <div id="item2" >
+                </div>
+                <div id="item3" >
+				</div>
+            </div>
+	</div>
+    
+  
+   
+</body>
+</html>
