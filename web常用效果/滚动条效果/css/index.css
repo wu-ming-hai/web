@@ -1,0 +1,90 @@
+* {
+    margin: 0 auto;
+    padding: 0;
+    text-decoration: none;
+}
+
+ul {
+    position: relative;
+    width: 1200px;
+    height: 350px;
+    list-style: none;
+    display: inline-block;
+}
+
+ul li {
+    position: relative;
+    width: 200px;
+    float: left;
+    height: 350px;
+    background: rgb(255, 231, 213);
+    text-align: center;
+    transition: all 0.6s ease-out;
+}
+
+ul li h3 {
+    position: relative;
+    width: 100%;
+    height: auto;
+    font-size: 20px;
+    margin-top: 15px;
+    font-weight: 100;
+    display: inline-block;
+}
+
+ul li p {
+    font-size: 18px;
+    width: 100%;
+    margin-top: 5px;
+    text-align: center;
+    height: auto;
+}
+
+ul li img {
+    position: absolute;
+    width: 150px;
+    height: 200px;
+    bottom: 15px;
+    right: 25px;
+	transition: all .6s ease-out;
+}
+
+ul li.on {
+    position: relative;
+    width: 400px;
+    background: rgb(109, 188, 253);
+}
+
+ul .on h3 {
+    position: relative;
+    width: 380px;
+    height: auto;
+    font-size: 20px;
+    color: white;
+    text-align: left;
+    padding: 0px 0px 0px 20px;
+}
+
+ul .on p {
+    position: relative;
+    width: 380px;
+    height: auto;
+    font-size: 18px;
+    color: white;
+    text-align: left;
+    padding: 0px 0px 0px 20px;
+}
+
+ul .on img {
+    position: absolute;
+    display: inline-block;
+    width: 200px;
+    height: 266px;
+    bottom: 10px;
+    right:  10px;
+}
+
+#bodybox{
+    width: 100%;
+    text-align: center;
+}

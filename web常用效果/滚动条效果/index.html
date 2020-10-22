@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>
+        二级滚动效果
+    </title>
+    <link href="css/index.css" type="text/css" rel="stylesheet" />
+    <script src="package/jquery-3.5.1.js">
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $("#box li").mouseover(function() {
+                $(this).addClass("on").siblings().removeClass("on");
+            });
+        });
+    </script>
+
+</head>
+
+<body>
+    <div id="bodybox">
+        <ul id="box">
+            <li class="on">
+                <h3>全新二级系列</h3>
+                <p>暗黑系列</p>
+                <img src="img/peijian1.jpg" />
+            </li>
+            <li>
+                <h3>全新二级系列</h3>
+                <p>精品加工</p>
+                <img src="img/peijian02.jpg" />
+            </li>
+            <li>
+                <h3>全新二级系列</h3>
+                <p>完美设计</p>
+                <img src="img/peijian03.jpg" />
+            </li>
+            <li>
+                <h3>全新二级系列</h3>
+                <p>全新设计</p>
+                <img src="img/peijian04.jpg" />
+            </li>
+            <li>
+                <h3>全新二级系列</h3>
+                <p>设计精美</p>
+                <img src="img/peijian05.jpg" />
+            </li>
+        </ul>
+    </div>
+    
+
+</body>
+
+</html>
